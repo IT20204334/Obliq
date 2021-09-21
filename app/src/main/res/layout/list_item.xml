@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSid"
+        android:layout_width="82sp"
+        android:layout_height="50dp"
+        android:text="Student ID     "
+        android:textSize="18sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/tvSphysics"
+        android:layout_width="77sp"
+        android:layout_height="50dp"
+        android:text="Physics     "
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvSchemistry"
+        android:layout_width="82sp"
+        android:layout_height="50dp"
+        android:text="Chemistry     "
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvSbiomaths"
+        android:layout_width="82sp"
+        android:layout_height="50dp"
+        android:text="Bio/Maths     "
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvSaverage"
+        android:layout_width="82sp"
+        android:layout_height="50dp"
+        android:text="Average     "
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+
+
+</LinearLayout>

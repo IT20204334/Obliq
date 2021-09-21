@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "251653042906",
+    "project_id": "obliq-f19cb",
+    "storage_bucket": "obliq-f19cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251653042906:android:63b077118e3bfa0cca6be3",
+        "android_client_info": {
+          "package_name": "com.example.obliq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251653042906-dfoq0h5tgcarvsr8i9b95dht2d3t7rap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGfX2EZV2TOdGfzjHiJQrtVfDUDRH60JY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251653042906-dfoq0h5tgcarvsr8i9b95dht2d3t7rap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
