@@ -37,8 +37,6 @@ public class ListAdapter extends ArrayAdapter {
         TextView tvSbiomaths = listItemView.findViewById(R.id.tvSbiomaths);
         TextView tvSaverage = listItemView.findViewById(R.id.tvSaverage);
 
-
-
         Marks marks = marksList.get(position);
 
         tvSid.setText(marks.getStudentID());
@@ -59,4 +57,5 @@ public class ListAdapter extends ArrayAdapter {
 
         return listItemView;
     }
+
 }

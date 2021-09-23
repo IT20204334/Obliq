@@ -2,7 +2,6 @@ package com.example.obliq;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -55,52 +54,98 @@ public class ManageMarksActivity extends AppCompatActivity {
 
 
         addMarksBtn.setOnClickListener(view -> {
-            marks.setStudentID(etStudentID.getText().toString().trim());
-            String sid = marks.getStudentID();
-            Double physics = Double.parseDouble(etPhysics.getText().toString());
-            marks.setPhysics(physics);
-            Double chemistry = Double.parseDouble(etChemistry.getText().toString());
-            marks.setChemistry(chemistry);
-            Double biomaths= Double.parseDouble(etBioMaths.getText().toString());
-            marks.setBioMaths(biomaths);
-            clearAll();
-            /*marks.setAverage(physics, chemistry, biomaths);
-            Double average = marks.getAverage();*/
+                marks.setStudentID(etStudentID.getText().toString().trim());
+                if(etStudentID.getText().toString().trim().isEmpty()){
+                    Toast.makeText(ManageMarksActivity.this, "Failed to input data. Cannot enter marks without student ID.", Toast.LENGTH_SHORT).show();
+                }
+                else if(!etStudentID.getText().toString().trim().startsWith("s")){
+                    Toast.makeText(ManageMarksActivity.this, "Student ID invalid.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    String sid = marks.getStudentID();
+                    Double physics = Double.parseDouble(etPhysics.getText().toString());
+                    marks.setPhysics(physics);
+                    Double chemistry = Double.parseDouble(etChemistry.getText().toString());
+                    marks.setChemistry(chemistry);
+                    Double biomaths = Double.parseDouble(etBioMaths.getText().toString());
+                    marks.setBioMaths(biomaths);
+                    addMarks(sid, physics, chemistry, biomaths);
+                }
 
-            /*dbref.child(String.valueOf(maxid+1)).setValue(marks);*/
-
-            dbref.push().getKey();
-            Marks marks = new Marks(sid, physics, chemistry, biomaths);
-            dbref.child(sid).setValue(marks);
-            Toast.makeText(ManageMarksActivity.this, "Data Inserted Successfully.", Toast.LENGTH_LONG).show();
         });
 
-       deleteMarksBtn.setOnClickListener(view ->{
+       /*deleteMarksBtn.setOnClickListener(view ->{
             marks.setStudentID(etStudentID.getText().toString().trim());
             String sid = marks.getStudentID();
             deleteMarks(sid);
 
+        });*/
+
+        deleteMarksBtn.setOnClickListener(view -> {
+            marks.setStudentID(etStudentID.getText().toString().trim());
+            String sid = marks.getStudentID();
+
+            //dbref = FirebaseDatabase.getInstance().getReference();
+            DatabaseReference sidReference = FirebaseDatabase.getInstance().getReference().child("Marks").child(sid);
+            //DatabaseReference sidReference = marks.child("Users").child("Nick123");
+            ValueEventListener eventListener = new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.exists()) {
+                        deleteMarks(sid);
+                    }else{
+                        Toast.makeText(ManageMarksActivity.this, "Deletion failed. Student ID does not exist", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                }
+            };
+            sidReference.addListenerForSingleValueEvent(eventListener);
         });
 
        updateMarksBtn.setOnClickListener(view ->{
            marks.setStudentID(etStudentID.getText().toString().trim());
            String sid = marks.getStudentID();
-           Double physics = Double.parseDouble(etPhysics.getText().toString());
-           marks.setPhysics(physics);
-           Double chemistry = Double.parseDouble(etChemistry.getText().toString());
-           marks.setChemistry(chemistry);
-           Double biomaths= Double.parseDouble(etBioMaths.getText().toString());
-           marks.setBioMaths(biomaths);
-           /*marks.setAverage(physics, chemistry, biomaths);
-           Double average = marks.getAverage();*/
-           updateMarks(sid, physics, chemistry, biomaths);
+           if(etStudentID.getText().toString().trim().isEmpty()){
+               Toast.makeText(ManageMarksActivity.this, "Enter student ID to update marks.", Toast.LENGTH_SHORT).show();
+           }else {
+               Double physics = Double.parseDouble(etPhysics.getText().toString());
+               marks.setPhysics(physics);
+               Double chemistry = Double.parseDouble(etChemistry.getText().toString());
+               marks.setChemistry(chemistry);
+               Double biomaths = Double.parseDouble(etBioMaths.getText().toString());
+               marks.setBioMaths(biomaths);
+               /*marks.setAverage(physics, chemistry, biomaths);
+               Double average = marks.getAverage();*/
+               updateMarks(sid, physics, chemistry, biomaths);
+           }
        });
 
        btnShowAvg.setOnClickListener(view ->{
-           Double physics = Double.parseDouble(etPhysics.getText().toString());
-           Double chemistry = Double.parseDouble(etChemistry.getText().toString());
-           Double biomaths= Double.parseDouble(etBioMaths.getText().toString());
-           calcStudentAverage(physics, chemistry, biomaths);
+           if(!etPhysics.getText().toString().trim().isEmpty()){
+               if(!etChemistry.getText().toString().trim().isEmpty()){
+                   if(!etBioMaths.getText().toString().trim().isEmpty()){
+                       Double physics = Double.parseDouble(etPhysics.getText().toString());
+                       Double chemistry = Double.parseDouble(etChemistry.getText().toString());
+                       Double biomaths = Double.parseDouble(etBioMaths.getText().toString());
+                       double avg = calcStudentAverage(physics, chemistry, biomaths);
+                       String avgString = Double.toString(avg);
+                       etAverage.setText(avgString);
+                   }
+                   else{
+                       Toast.makeText(ManageMarksActivity.this, "Please enter values for all 3 marks.", Toast.LENGTH_SHORT).show();
+                   }
+               }
+               else{
+                   Toast.makeText(ManageMarksActivity.this, "Please enter values for all 3 marks..", Toast.LENGTH_SHORT).show();
+               }
+           }
+           else{
+               Toast.makeText(ManageMarksActivity.this, "Please enter values for all 3 marks..", Toast.LENGTH_SHORT).show();
+           }
+
        });
 
 
@@ -108,26 +153,33 @@ public class ManageMarksActivity extends AppCompatActivity {
 
     }
 
-    public void deleteMarks(String sid){
+    public void addMarks(String sid, Double physics, Double chemistry, Double biomaths){
+            dbref.push().getKey();
+            Marks marks = new Marks(sid, physics, chemistry, biomaths);
+            dbref.child(sid).setValue(marks);
+            Toast.makeText(ManageMarksActivity.this, "Data inserted successfully.", Toast.LENGTH_LONG).show();
+            clearAll();
+    }
 
-        dbref = FirebaseDatabase.getInstance().getReference().child("Marks").child(sid);
-        dbref.removeValue();
-        Toast.makeText(ManageMarksActivity.this, "Data deleted successfully", Toast.LENGTH_LONG).show();
-        clearAll();
+    public void deleteMarks(String sid){
+            dbref = FirebaseDatabase.getInstance().getReference().child("Marks").child(sid);
+            dbref.removeValue();
+            Toast.makeText(ManageMarksActivity.this, "Data deleted successfully", Toast.LENGTH_LONG).show();
+            clearAll();
     }
 
     public void updateMarks(String sid, Double physics, Double chemistry, Double biomaths){
-        dbref = FirebaseDatabase.getInstance().getReference().child("Marks").child(sid);
-        Marks marks = new Marks(sid, physics, chemistry, biomaths);
-        dbref.setValue(marks);
-        Toast.makeText(ManageMarksActivity.this, "Marks updated successfully", Toast.LENGTH_LONG).show();
-        clearAll();
+            dbref = FirebaseDatabase.getInstance().getReference().child("Marks").child(sid);
+            dbref.setValue(marks);
+            Toast.makeText(ManageMarksActivity.this, "Marks updated successfully", Toast.LENGTH_LONG).show();
+            clearAll();
     }
 
-    public void calcStudentAverage(Double physics, Double chemistry, Double biomaths){
-        Double avg = (physics+chemistry+biomaths)/3.0;
-        String avgString = Double.toString(avg);
-        etAverage.setText(avgString);
+    public static double calcStudentAverage(double physics, double chemistry, double biomaths){
+        double avg = (physics + chemistry + biomaths) / 3.0;
+        //String avgString = Double.toString(avg);
+        //etAverage.setText(avgString);
+        return avg;
     }
 
     public void clearAll(){

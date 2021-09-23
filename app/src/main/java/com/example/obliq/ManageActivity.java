@@ -11,20 +11,20 @@ import android.widget.EditText;
 public class ManageActivity extends AppCompatActivity {
 
     Button marksBtn;
-    Button regBtn;
+    Button addNoticeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage);
         marksBtn = (Button) findViewById(R.id.marksBtn);
-        regBtn = (Button)findViewById(R.id.addNoticeBtn);
+        addNoticeBtn = (Button)findViewById(R.id.addNoticeBtn);
 
         marksBtn.setOnClickListener(view -> {
             openManageMarks();
         });
 
-        regBtn.setOnClickListener(view -> {
+        addNoticeBtn.setOnClickListener(view -> {
             openTestActivity();
         });
 
