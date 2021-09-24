@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whitee"
+    tools:context=".update_pay">
+
+    <TextView
+        android:id="@+id/Update_pay"
+        android:layout_width="265dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Update_pay"
+        android:textColor="@color/teal_700"
+        android:textColorHighlight="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Card_nu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/Card_nu"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/et_stuname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/stu_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Update_pay" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="241dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Card_type">
+
+        <RadioButton
+            android:id="@+id/Visa_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/Visa_card"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <RadioButton
+            android:id="@+id/master_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/master_card"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Card_type"
+        android:layout_width="165dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Card_type"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_stuname" />
+
+    <EditText
+        android:id="@+id/stuu_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/stuu_ID"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Card_nu"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/et_CVV"
+        android:layout_width="235dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/et_CVV"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stuu_ID" />
+
+    <EditText
+        android:id="@+id/expir_date"
+        android:layout_width="233dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/expir_date"
+        android:inputType="date"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_CVV" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="164dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/update_paym"
+        app:layout_constraintStart_toEndOf="@+id/stuu_ID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/grily" />
+
+    <Button
+        android:id="@+id/update_paym"
+        android:layout_width="166dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/update_paym"
+        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expir_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
