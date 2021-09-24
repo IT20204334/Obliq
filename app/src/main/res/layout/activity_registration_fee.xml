@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calbg"
+    tools:context=".RegistrationFee">
+
+    <TextView
+        android:id="@+id/calc_topic"
+        android:layout_width="273dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/calc_topic"
+        android:textColor="#100F0F"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theory"
+        android:layout_width="91dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/theory"
+        android:textColor="#0B0A0A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_topic" />
+
+    <TextView
+        android:id="@+id/revision"
+        android:layout_width="91dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/revision"
+        android:textColor="#121111"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theory" />
+
+    <TextView
+        android:id="@+id/paper"
+        android:layout_width="91sp"
+        android:layout_height="45sp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/paper"
+        android:textColor="#100F0F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revision" />
+
+    <EditText
+        android:id="@+id/et_theory"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="17dp"
+        android:ems="10"
+        android:hint="@string/et_theory"
+        android:inputType="number"
+        android:textColor="#292222"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/theory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toEndOf="@+id/theory" />
+
+    <EditText
+        android:id="@+id/et_revision"
+        android:layout_width="94sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="158dp"
+        android:ems="10"
+        android:hint="@string/et_revision"
+        android:inputType="number"
+        android:textColor="#292222"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/revision"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/revision" />
+
+    <EditText
+        android:id="@+id/et_paper"
+        android:layout_width="94sp"
+        android:layout_height="40sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="159dp"
+        android:ems="10"
+        android:hint="@string/et_paper"
+        android:inputType="number"
+        android:textColor="#292222"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/paper" />
+
+    <Button
+        android:id="@+id/btn_regfee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="200dp"
+        android:backgroundTint="#2D3665"
+        android:text="@string/btn_regfee"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paper" />
+
+    <TextView
+        android:id="@+id/reg_fee"
+        android:layout_width="196dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/reg_fee"
+        android:textColor="#040303"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_regfee" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="270dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="@string/btn_home"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_fee" />
+
+    <TextView
+        android:id="@+id/result_fee"
+        android:layout_width="125dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/result_fee"
+        android:textColor="#400303"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/reg_fee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reg_fee" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="143dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

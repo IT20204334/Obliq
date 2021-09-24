@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regbg"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="312dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/register"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/registerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/registerName"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register" />
+
+    <EditText
+        android:id="@+id/registerMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/registerMail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerName" />
+
+    <EditText
+        android:id="@+id/registerPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/registerPassword"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerMobile" />
+
+    <EditText
+        android:id="@+id/registerConfirmPw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/registerConfirmPw"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
+    <EditText
+        android:id="@+id/registerMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/registerMobile"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerMail" />
+
+    <CheckBox
+        android:id="@+id/teacherCheckbox"
+        android:layout_width="168dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/teacherCheckbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPw" />
+
+    <CheckBox
+        android:id="@+id/studentCheckbox"
+        android:layout_width="168dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/studentCheckbox"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teacherCheckbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/teacherCheckbox" />
+
+    <Button
+        android:id="@+id/registerCreatebtn"
+        android:layout_width="256dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@android:color/black"
+        android:text="@string/registerCreatebtn"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacherCheckbox" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="432dp"
+        android:layout_height="895dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/student" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
