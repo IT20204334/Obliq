@@ -10,13 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Qaname"
-        android:textSize="18dp"/>
+        android:textColor="#051A4E"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
 </LinearLayout>

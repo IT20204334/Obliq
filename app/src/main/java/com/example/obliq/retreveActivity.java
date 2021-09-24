@@ -48,7 +48,7 @@ public class retreveActivity extends AppCompatActivity {
                     nticeList.add(ntice);
                 }
 
-                ListAdapter adapter = new ListAdapter(retreveActivity.this,nticeList);
+                ListAdapter1 adapter = new ListAdapter1(retreveActivity.this,nticeList);
                 myLisview.setAdapter(adapter);
             }
 

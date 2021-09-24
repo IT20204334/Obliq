@@ -63,4 +63,20 @@
     <string name="tv_h">Welcome to Obliq</string>
     <string name="tv_viewpaper">View Your Papers Price</string>
     <string name="tv_viewpaper1">Paper List</string>
+    <string name="invalid_name">Please enter a name</string>
+    <string name="invalid_id">Please enter a id</string>
+    <string name="invalid_subject">Please enter a subject</string>
+    <string name="invalid_date">Please enter a date</string>
+    <string name="invalid_notice">Please enter a notice</string>
+    <string name="tv_maths">Combined maths</string>
+    <string name="tv_phy">Physics</string>
+    <string name="tv_che">Chemistry</string>
+    <string name="tv_bio1">Biology</string>
+    <string name="et_matha">600</string>
+    <string name="et_phy">500</string>
+    <string name="et_che">550</string>
+    <string name="et_bio1">450</string>
+    <string name="bt_cost">Total</string>
+    <string name="et_tot" />
+    <string name="tv_6">Result</string>
 </resources>

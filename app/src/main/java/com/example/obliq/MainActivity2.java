@@ -7,10 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -21,6 +25,8 @@ public class MainActivity2 extends AppCompatActivity {
     Button btn_add, btn_deleteno, btn_updatenotice;
     DatabaseReference dbref;
     Ntice ntice;
+
+//AwesomeValidation awesomeValidation;
 
 
     @Override
@@ -40,28 +46,52 @@ public class MainActivity2 extends AppCompatActivity {
         dbref = FirebaseDatabase.getInstance("https://obliq-4bef4-default-rtdb.firebaseio.com/").getReference().child("Ntice");
         btn_add.setOnClickListener(view -> {
             ntice.setName(etName.getText().toString().trim());
-            String Name = ntice.getName();
-            ntice.setID(etID.getText().toString().trim());
-            String ID = ntice.getID();
-            ntice.setSubject(etSubject.getText().toString().trim());
-            String Subject = ntice.getSubject();
-            ntice.setDate(etDate.getText().toString().trim());
-            String Date = ntice.getDate();
-            ntice.setNotice(etNotice.getText().toString().trim());
-            String Notice = ntice.getNotice();
-            dbref.push().getKey();
-            Ntice ntice = new Ntice(Name, Subject, Date, Notice);
+            if (etID.getText().toString().trim().isEmpty()) {
+                Toast.makeText(MainActivity2.this,"Cannot enter notice without notice id",Toast.LENGTH_SHORT).show();
+            }
+            else if(!etID.getText().toString().trim().startsWith("N")){
+                Toast.makeText(MainActivity2.this,"Notice ID invalid",Toast.LENGTH_SHORT).show();
+            }
+            else if(etID.getText().toString().isEmpty()||etName.getText().toString().trim().isEmpty()|| etSubject.getText().toString().trim().isEmpty() || etDate.getText().toString().trim().isEmpty() || etNotice.getText().toString().trim().isEmpty()){
+                Toast.makeText(MainActivity2.this,"Please fill other filds",Toast.LENGTH_SHORT).show();
+            }
+            else {
+                String Name = ntice.getName();
+                ntice.setID(etID.getText().toString().trim());
+                String ID = ntice.getID();
+                ntice.setSubject(etSubject.getText().toString().trim());
+                String Subject = ntice.getSubject();
+                ntice.setDate(etDate.getText().toString().trim());
+                String Date = ntice.getDate();
+                ntice.setNotice(etNotice.getText().toString().trim());
+                String Notice = ntice.getNotice();
+                dbref.push().getKey();
+                Ntice ntice = new Ntice(Name, Subject, Date, Notice);
 
-            dbref.child(ID).setValue(ntice);
-            Toast.makeText(MainActivity2.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
-            clearAll();
+                dbref.child(ID).setValue(ntice);
+                 Toast.makeText(MainActivity2.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
+                 clearAll();
+            }
 
         });
 
+
+
+
+
+
         btn_deleteno.setOnClickListener(view -> {
-            ntice.setID(etID.getText().toString().trim());
-            String ID = ntice.getID();
-            deleteNtice(ID);
+            if (etID.getText().toString().trim().isEmpty()) {
+                Toast.makeText(MainActivity2.this,"Cannot delete notice without valid notice id",Toast.LENGTH_SHORT).show();
+            }
+            else if(!etID.getText().toString().trim().startsWith("N")){
+                Toast.makeText(MainActivity2.this,"Notice ID invalid",Toast.LENGTH_SHORT).show();
+            }
+            else {
+                ntice.setID(etID.getText().toString().trim());
+                String ID = ntice.getID();
+                deleteNtice(ID);
+            }
         });
 
 
@@ -70,15 +100,24 @@ public class MainActivity2 extends AppCompatActivity {
         {
             ntice.setName(etName.getText().toString().trim());
             String Name = ntice.getName();
-            ntice.setID(etID.getText().toString().trim());
-            String ID = ntice.getID();
-            ntice.setSubject(etSubject.getText().toString().trim());
-            String Subject = ntice.getSubject();
-            ntice.setDate(etDate.getText().toString().trim());
-            String Date = ntice.getDate();
-            ntice.setNotice(etNotice.getText().toString().trim());
-            String Notice = ntice.getNotice();
-            updateNtice(Name, ID, Subject, Date, Notice);
+            if(etID.getText().toString().trim().isEmpty()){
+                Toast.makeText(MainActivity2.this,"Enter notice id to update notice",Toast.LENGTH_SHORT).show();
+            }
+            else if (!etID.getText().toString().trim().startsWith("N")){
+                Toast.makeText(MainActivity2.this,"Notice ID invalid",Toast.LENGTH_SHORT).show();
+
+            }
+              else  {
+                ntice.setID(etID.getText().toString().trim());
+                String ID = ntice.getID();
+                ntice.setSubject(etSubject.getText().toString().trim());
+                String Subject = ntice.getSubject();
+                ntice.setDate(etDate.getText().toString().trim());
+                String Date = ntice.getDate();
+                ntice.setNotice(etNotice.getText().toString().trim());
+                String Notice = ntice.getNotice();
+                updateNtice(Name, ID, Subject, Date, Notice);
+            }
 
 
         });
@@ -93,12 +132,13 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     public void deleteNtice(String ID) {
-        dbref = FirebaseDatabase.getInstance().getReference().child("Ntice").child(ID);
-        dbref.removeValue();
 
-        Toast.makeText(MainActivity2.this, "Notice deleted Successfully", Toast.LENGTH_LONG).show();
-        clearAll();
-    }
+            dbref = FirebaseDatabase.getInstance().getReference().child("Ntice").child(ID);
+            dbref.removeValue();
+            Toast.makeText(MainActivity2.this, "Notice deleted Successfully", Toast.LENGTH_LONG).show();
+            clearAll();
+        }
+
 
     public void updateNtice(String Name, String ID, String Subject, String Date,String Notice) {
         dbref = FirebaseDatabase.getInstance().getReference().child("Ntice").child(ID);

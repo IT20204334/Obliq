@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".retreveActivity"
-    android:background="@drawable/viewn">
+    android:background="@drawable/fd">
 
     <ListView
         android:id="@+id/myListView"
