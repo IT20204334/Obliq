@@ -61,27 +61,18 @@ public class Calculations extends AppCompatActivity {
                     }
                 }
                 else{
-                    tFee = 0;
+                   tFee = 0;
+                Toast.makeText(Calculations.this,"Select checkbox to calculate registration fee",Toast.LENGTH_SHORT).show();
                 }
                 calcRegFee(count);
                 calcRegistrationFee(tFee);
 
         });
 
-          // confirm.setOnClickListener(new View.OnClickListener() {
-           //    @Override
-          //      public void onClick(View view) {
-
-                // open register activity
-             //     startActivity(new Intent(Calculations.this,MainActivity.class));
-                  //clearAll();
-             // }
-       //   });
         confirm.setOnClickListener(view -> {
             clearAll();
-            //startActivity(new Intent(Calculations.this,MainActivity.class));
+            startActivity(new Intent(Calculations.this,MainActivity.class));
         });
-
 
     }
 
@@ -91,13 +82,13 @@ public class Calculations extends AppCompatActivity {
         }
         else if (count == 2)
         {
-            tFee = 1000;
+            tFee = tFee+1000;
         }
         else if (count == 3) {
-            tFee = 1500;
+            tFee = tFee+1500;
         }
         else{
-           // Toast.makeText()
+          // Toast.makeText(Calculations.this,"select checkbox to calculate registration fee",Toast.LENGTH_SHORT).show();
             }
         return tFee;
     }

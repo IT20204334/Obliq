@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
                 final String passwordTxt = password.getText().toString();
 
                 if(phoneTxt.isEmpty() || passwordTxt.isEmpty()){
-                    Toast.makeText(Login.this,"Please enter your email or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Please enter your Phone Number or Password", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
                                 }
                             }
                             else{
-                                Toast.makeText(Login.this,"Wrong Phone", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this,"Wrong Phone Number", Toast.LENGTH_SHORT).show();
                             }
 
                         }
