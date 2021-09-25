@@ -40,8 +40,6 @@ public class retreveQuestion extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 questionList.clear();
 
-
-
                 for(DataSnapshot questionDatasnap : dataSnapshot.getChildren()){
 
                     Question question = questionDatasnap.getValue(Question.class);

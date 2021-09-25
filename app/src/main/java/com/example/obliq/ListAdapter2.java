@@ -17,7 +17,6 @@ public class ListAdapter2 extends ArrayAdapter {
     private Activity mContext;
     List<Question> questionList;
 
-
     public ListAdapter2(Activity mContext, List<Question> questionList){
         super(mContext,R.layout.list_question,questionList);
         this.mContext = mContext;
@@ -28,22 +27,19 @@ public class ListAdapter2 extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-
         LayoutInflater inflater = mContext.getLayoutInflater();
         View listQuestionView=inflater.inflate(R.layout.list_question,null,true);
 
         TextView tvQaname = listQuestionView.findViewById(R.id.tvQaname);
         TextView tvQuestion = listQuestionView.findViewById(R.id.tvQuestion);
 
-
         Question question = questionList.get(position);
 
         tvQaname.setText(question.getQaname());
         tvQuestion.setText(question.getQuestion());
 
-
         return listQuestionView;
-
-
     }
+
 }
+

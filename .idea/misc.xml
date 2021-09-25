@@ -8,18 +8,29 @@
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/drawable/ic_marks.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/drawable/ic_notices.xml" value="0.2518518518518518" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/drawable/ic_papers.xml" value="0.2518518518518518" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_add_pay.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_admin_login.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_cal.xml" value="0.1" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_cal_papers.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_calcost.xml" value="0.264" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_calculatefee.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_calculations.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_login.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_main2.xml" value="0.21944444444444444" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_main3.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_main4.xml" value="0.2" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_main5.xml" value="0.2" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_manage.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_manage_marks.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_qa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_retreve.xml" value="0.2" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_retreve_question.xml" value="0.2" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_retrievepay.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_update_pay.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/activity_view_marks.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_.notices.xml" value="0.1" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_home.xml" value="0.2037037037037037" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_marks.xml" value="0.1" />
@@ -28,6 +39,8 @@
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_papers.xml" value="0.264" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_payments.xml" value="0.2" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/fragment_qa.xml" value="0.23148148148148148" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/list_item.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/list_item2.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/list_notice.xml" value="0.264" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/list_question.xml" value="0.264" />
         <entry key="..\:/Users/MSI-Gaming/AndroidStudioProjects/Obliq/app/src/main/res/layout/nav_header.xml" value="0.264" />

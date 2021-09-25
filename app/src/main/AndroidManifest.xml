@@ -9,6 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Obliq">
+
+        //maleesha
+        -<activity
+        android:exported="true"
+        android:name=".AdminLoginActivity">
+    </activity>
+        <activity android:exported="true" android:name=".ManageMarksActivity"/>
+
+        <activity android:exported="true" android:name=".ViewMarks"/>
+        <activity android:exported="true" android:name=".ManageActivity"/>
+
+
         <activity
             android:name=".retreveQuestion"
             android:exported="true" />
@@ -22,20 +34,49 @@
             android:name=".Qa"
             android:exported="true" />
         <activity
-            android:name=".Home"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity2"
             android:exported="true" />
+
+
+
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Obliq.NoActionBar">
+            android:name=".Retrievepay"
+            android:exported="true" />
+        <activity
+            android:name=".Calculatefee"
+            android:exported="true" />
+        <activity
+            android:name=".update_pay"
+            android:exported="true" />
+
+        <activity
+            android:name=".add_pay"
+            android:exported="true" />
+
+
+
+
+        <activity
+            android:name=".Calculations"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
+            android:exported="true" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Obliq.NoActionBar">
+
         </activity>
     </application>
 

@@ -79,4 +79,242 @@
     <string name="bt_cost">Total</string>
     <string name="et_tot" />
     <string name="tv_6">Result</string>
+
+
+
+
+    <string name="textView5">Student name</string>
+
+    <string name="textView2">Test ID</string>
+
+    <string name="editText1">Enter test id</string>
+
+    <string name="viewMarksBtn">VIEW MARKS</string>
+
+    <string name="textView13">Student Marks</string>
+
+    <string name="textView11">Test Average</string>
+
+    <string name="textView12">Average mark</string>
+
+    <string name="textView18">Manage Student Marks</string>
+
+    <string name="addMarksBtn">ADD MARKS</string>
+
+    <string name="updateMarksBtn">UPDATE MARKS</string>
+
+    <string name="deleteMarksBtn">DELETE MARKS</string>
+
+    <string name="textView4">Test ID</string>
+
+    <string name="textView16">Student ID</string>
+
+    <string name="textView17">Marks</string>
+
+    <string name="editText2">Enter Test ID</string>
+
+    <string name="editText3">Enter Student ID</string>
+
+    <string name="editText5">Enter Student Marks</string>
+
+    <string name="textView18new">MANAGE STUDENT MARKS</string>
+
+    <string name="marksBtn">Manage Student Marks</string>
+
+    <string name="addNoticeBtn">Add Notices</string>
+
+    <string name="updateNoticeBtn">Update Existing Notices</string>
+
+    <string name="deleteNoticesBtn">Delete Notices</string>
+
+    <string name="textviewNew18">Select task to continue</string>
+
+    <string name="tvTestID">Test ID</string>
+
+    <string name="tvName">Name</string>
+
+    <string name="tvMarks">Marks</string>
+
+    <string name="etMarks">Enter student marks</string>
+
+    <string name="etName">Enter student name</string>
+
+    <string name="etTestID">Enter test ID</string>
+
+    <string name="tvStudentID">Student ID</string>
+
+    <string name="etStudentID">Enter student ID</string>
+
+    <string name="etTID">Enter test ID</string>
+
+    <string name="toViewMarksBtn">VIEW MARKS</string>
+
+    <string name="etAvgMark">AVERAGE MARK</string>
+
+    <string name="etAverage"></string>
+
+    <string name="tvPhysics">Physics</string>
+
+    <string name="tvChemistry">Chemistry</string>
+
+    <string name="tvBioMaths">Biology/Maths</string>
+
+    <string name="etPhysics">Enter Physics marks</string>
+
+    <string name="etChemistry">Enter Chemistry marks</string>
+
+    <string name="etBioMaths">Enter Maths/Biology marks</string>
+
+    <string name="tvClasses">CHOOSE CLASSES</string>
+
+    <string name="chkTheory">Theory</string>
+
+    <string name="chkRevision">Revision</string>
+
+    <string name="chkPapers">Papers</string>
+
+    <string name="btnCalcRegFee">CALCULATE REGISTRATION FEE</string>
+
+    <string name="tvRegFee">Registration Fee:</string>
+
+    <string name="etRegFee"/>
+
+    <string name="btnConfirm">CONFIRM</string>
+
+    <string name="tvAverage">Average</string>
+
+    <string name="btnShowAvg">Show Average</string>
+
+    <string name="tvStdID">SID</string>
+
+    <string name="tvStdPhysics">Physics</string>
+
+    <string name="tvStdChemistry">Chemistry</string>
+
+    <string name="tvStdBioMaths">Bio/Maths</string>
+
+    <string name="tvStdAverage">Avg.</string>
+
+    <string name="tvInstructions">Click on the button below to view your marks</string>
+
+    <string name="etAdminPwd">Enter password</string>
+
+
+    -<string name="btnAdminLogin">
+
+-<![CDATA[GO>>]]>
+</string>
+
+    <string name="showMarksBtn">SHOW MARKS</string>
+
+
+    -<string name="toAdminPage">
+
+    -<![CDATA[MANAGE APPLICATION>>]]>
+
+</string>
+
+
+
+
+    <string name="Add_pay">Add Payment</string>
+    <string name="name_bank">Name of bank</string>
+    <string name="card_no">Card Number</string>
+    <string name="card_cvv">CVV</string>
+    <string name="Expiry_date">Date of Expiry of card</string>
+    <string name="btn_pay">PAY</string>
+    <string name="btn_delete">DELETE</string>
+    <string name="text_paym">Payment</string>
+    <string name="update_pay">Update Payment</string>
+    <string name="view_pay">View Payment</string>
+    <string name="add_pay">Add Payment</string>
+    <string name="Add_details">Add Student Details</string>
+    <string name="Student_Id">Student ID</string>
+    <string name="Student_name">Name</string>
+    <string name="St_subject">Subject</string>
+    <string name="St_fee">Fee</string>
+    <string name="btn_addp">PAY</string>
+    <string name="View_Payment">View Payment</string>
+    <string name="ID_no">ID Number</string>
+    <string name="Card_No">Card Number</string>
+    <string name="Text_subject">Subject</string>
+    <string name="Btn_view">VIEW</string>
+    <string name="Update_pay">Update Payment</string>
+    <string name="Bank_nam">Name of bank</string>
+    <string name="Card_nu">Card Number</string>
+    <string name="expiry_date">Date of expiry of card</string>
+    <string name="update_paym">UPDATE</string>
+    <string name="stu_name">Name</string>
+    <string name="stud_name">Name</string>
+    <string name="Stu_name">Name</string>
+    <string name="Card_NO">Card Number</string>
+    <string name="CVV_Card">CVV</string>
+    <string name="Expire_date">Date of expiry of card</string>
+    <string name="clz_fee">Fee</string>
+    <string name="Visa_card">Visa</string>
+    <string name="Mater_card">Mastercard</string>
+    <string name="Card_type">Card Type</string>
+    <string name="master_card">Mastercard</string>
+    <string name="et_Name">Name</string>
+    <string name="No_days">Number of days</string>
+    <string name="btn_calculate">CALCULATE</string>
+    <string name="et_stuname">Name</string>
+    <string name="btn_calc">CALCULATING CLASS FEE</string>
+    <string name="clas_fee">1000</string>
+    <string name="day_fee">Day Fee</string>
+    <string name="Class_fee" />
+    <string name="text_class">CLASS FEE</string>
+    <string name="et_ID">Student ID</string>
+    <string name="et_stuID">Student ID</string>
+    <string name="stuu_ID">Student ID</string>
+    <string name="et_CVV">CVV</string>
+    <string name="expir_date">Expire date</string>
+    <string name="et_Subject">Chemistry,Physics,Bio,Maths</string>
+    <string name="et_sub">Physics,Chemistry,Bio,Maths</string>
+    <string name="et_Sub">Chemistry,Physics,Bio,Maths</string>
+    <string name="dayy_fee">day fee-Bio-700,Maths-800,Chemistry-700,Physics-800</string>
+
+
+
+
+    <string name="login">Login</string>
+    <string name="loginEmail">E-mail</string>
+    <string name="loginPassword">Password</string>
+    <string name="loginBtn">LOGIN</string>
+    <string name="gotoRegister">CREATE ACCOUNT</string>
+    <string name="register">Register to Obliq</string>
+    <string name="registerName">Name</string>
+    <string name="registerMail">E-mail</string>
+    <string name="registerMobile">Mobile No</string>
+    <string name="registerPassword">Password</string>
+    <string name="registerConfirmPw">Confirm Password</string>
+    <string name="teacherCheckbox">Register As Teacher</string>
+    <string name="studentCheckbox">Register As Student</string>
+    <string name="registerCreatebtn">CREATE ACCOUNT</string>
+    <string name="registerLoginbtn">LOGIN</string>
+    <string name="updateProfile">Update My Profile</string>
+    <string name="updateName">Name</string>
+    <string name="updateMail">E-mail</string>
+    <string name="updatePhone">Mobile No</string>
+    <string name="updatePassword">Password</string>
+    <string name="updateConfirmpw">Confirm Password</string>
+    <string name="updateBtn">Update</string>
+    <string name="delete">Delete My Profile</string>
+    <string name="deleteName">Name</string>
+    <string name="deleteMail">E-mail</string>
+    <string name="deletePhone">Mobile No</string>
+    <string name="deletePassword">Password</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="topic">Choose Classes</string>
+    <string name="theoryCheckbox">Theory </string>
+    <string name="revisionCheckbox">Revision</string>
+    <string name="paperCheckbox">Papers</string>
+    <string name="btnCheck">Total Fee</string>
+    <string name="regName">Registration Fee</string>
+    <string name="registrationFee">Registration Fee :- </string>
+    <string name="confirm">GO TO THE HOME</string>
+    <string name="txtTeacher">Teacher Log in</string>
+    <string name="loginMobile">Mobile Number</string>
+    <string name="answer" />
+
 </resources>

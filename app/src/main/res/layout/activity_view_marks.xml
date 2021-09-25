@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/obliq_admin2"
+    android:orientation="vertical"
+    tools:context=".ViewMarks">
+
+    <LinearLayout
+        android:id="@+id/listTopicView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvStdID"
+            android:layout_width="76dp"
+            android:layout_height="48dp"
+            android:text="@string/tvStdID"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStdPhysics"
+            android:layout_width="82dp"
+            android:layout_height="48dp"
+            android:text="@string/tvStdPhysics"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStdChemistry"
+            android:layout_width="84dp"
+            android:layout_height="48dp"
+            android:text="@string/tvStdChemistry"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStdBioMaths"
+            android:layout_width="84dp"
+            android:layout_height="48dp"
+            android:text="@string/tvStdBioMaths"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStdAverage"
+            android:layout_width="82dp"
+            android:layout_height="48dp"
+            android:text="Average"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:padding="5dp" />
+
+
+</LinearLayout>

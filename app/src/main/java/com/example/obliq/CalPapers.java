@@ -2,6 +2,7 @@ package com.example.obliq;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -103,6 +104,11 @@ public class CalPapers extends AppCompatActivity {
 
         bt_order.setOnClickListener(view ->{
             clearAll();
+        });
+
+        bt_order.setOnClickListener(view -> {
+            clearAll();
+            startActivity(new Intent(CalPapers.this,MainActivity.class));
         });
 
     }

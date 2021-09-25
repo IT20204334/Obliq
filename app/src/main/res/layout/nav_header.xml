@@ -9,12 +9,6 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="72dp"
-        android:layout_height="77dp"
-        app:srcCompat="@drawable/logo" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,10 +16,11 @@
         android:text="Obliq"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="107dp"
         android:layout_height="wrap_content"
-        android:text="obliq@gmail.com" />
+        app:srcCompat="@drawable/neww" />
 
 
 </LinearLayout>

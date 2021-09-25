@@ -4,40 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/homeContener"
-    android:background="@drawable/abc">
+    android:background="@drawable/homeh">
 
     <TextView
         android:id="@+id/tv_h"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="287dp"
+        android:layout_height="68dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="650dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="456dp"
         android:text="@string/tv_h"
-        android:textSize="34sp" />
+        android:textColor="#091143"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_home"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="192dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="9dp"
         android:backgroundTint="#A62525"
-        android:text="Button"
+        android:text="Admin Page >"
         android:textColorHighlight="#C13131"
         android:textColorLink="#911919" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="270dp"
-        android:layout_height="182dp"
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="321dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="206dp"
+        android:layout_marginBottom="204dp"
+        app:srcCompat="@drawable/obliq_marks_preview_rev_1" />
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="463dp"
-        app:srcCompat="@drawable/logo0" />
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="96dp"
+        android:text="'Education is the most powerful weapon which you can use to change the world..'"
+        android:textColor="#515255"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
 
 </RelativeLayout>

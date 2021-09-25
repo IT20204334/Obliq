@@ -109,8 +109,8 @@
 
     <Button
         android:id="@+id/bt_order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="44dp"
         android:layout_marginTop="52dp"
         android:backgroundTint="#3949AB"
         android:text="DONE"
