@@ -81,8 +81,6 @@
     <string name="tv_6">Result</string>
 
 
-
-
     <string name="textView5">Student name</string>
 
     <string name="textView2">Test ID</string>
@@ -177,7 +175,7 @@
 
     <string name="tvRegFee">Registration Fee:</string>
 
-    <string name="etRegFee"/>
+    <string name="etRegFee" />
 
     <string name="btnConfirm">CONFIRM</string>
 
@@ -200,7 +198,8 @@
     <string name="etAdminPwd">Enter password</string>
 
 
-    -<string name="btnAdminLogin">
+    -
+    <string name="btnAdminLogin">
 
 -<![CDATA[GO>>]]>
 </string>
@@ -208,13 +207,12 @@
     <string name="showMarksBtn">SHOW MARKS</string>
 
 
-    -<string name="toAdminPage">
+    -
+    <string name="toAdminPage">
 
     -<![CDATA[MANAGE APPLICATION>>]]>
 
 </string>
-
-
 
 
     <string name="Add_pay">Add Payment</string>
@@ -273,8 +271,7 @@
     <string name="et_sub">Physics,Chemistry,Bio,Maths</string>
     <string name="et_Sub">Chemistry,Physics,Bio,Maths</string>
     <string name="dayy_fee">day fee-Bio-700,Maths-800,Chemistry-700,Physics-800</string>
-
-
+    <string name="etSubject">Chemistry,Physics,Bio,Maths</string>
 
 
     <string name="login">Login</string>

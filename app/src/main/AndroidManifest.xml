@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Obliq">
-
-        //maleesha
-        -<activity
-        android:exported="true"
-        android:name=".AdminLoginActivity">
-    </activity>
-        <activity android:exported="true" android:name=".ManageMarksActivity"/>
-
-        <activity android:exported="true" android:name=".ViewMarks"/>
-        <activity android:exported="true" android:name=".ManageActivity"/>
-
-
+        <activity
+            android:name=".Ratingactivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminLoginActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ManageMarksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewMarks"
+            android:exported="true" />
+        <activity
+            android:name=".ManageActivity"
+            android:exported="true" />
         <activity
             android:name=".retreveQuestion"
             android:exported="true" />
@@ -36,9 +39,6 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-
-
-
         <activity
             android:name=".Retrievepay"
             android:exported="true" />
@@ -48,14 +48,9 @@
         <activity
             android:name=".update_pay"
             android:exported="true" />
-
         <activity
             android:name=".add_pay"
             android:exported="true" />
-
-
-
-
         <activity
             android:name=".Calculations"
             android:exported="true" />
@@ -69,15 +64,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Obliq.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.Obliq.NoActionBar"></activity>
     </application>
 
 </manifest>

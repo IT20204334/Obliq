@@ -39,6 +39,9 @@ public class Qa extends AppCompatActivity {
             else if(!etQsid.getText().toString().trim().startsWith("S")){
                 Toast.makeText(Qa.this,"Student ID invalid",Toast.LENGTH_SHORT).show();
             }
+            else if(etQsid.length()!=4){
+                Toast.makeText(Qa.this,"Should have 4 numbers for Student ID",Toast.LENGTH_SHORT).show();
+            }
             else if(etQaname.getText().toString().trim().isEmpty() || etQuestion.getText().toString().trim().isEmpty()){
                 Toast.makeText(Qa.this,"Please fill all the fields",Toast.LENGTH_SHORT).show();
             }

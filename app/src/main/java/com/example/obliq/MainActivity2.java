@@ -28,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 //AwesomeValidation awesomeValidation;
 
-
+//insert
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +51,9 @@ public class MainActivity2 extends AppCompatActivity {
             }
             else if(!etID.getText().toString().trim().startsWith("N")){
                 Toast.makeText(MainActivity2.this,"Notice ID invalid",Toast.LENGTH_SHORT).show();
+            }
+            else if(etID.length()!=5){
+                Toast.makeText(MainActivity2.this,"Should have 4 numbers",Toast.LENGTH_SHORT).show();
             }
             else if(etID.getText().toString().isEmpty()||etName.getText().toString().trim().isEmpty()|| etSubject.getText().toString().trim().isEmpty() || etDate.getText().toString().trim().isEmpty() || etNotice.getText().toString().trim().isEmpty()){
                 Toast.makeText(MainActivity2.this,"Please fill other filds",Toast.LENGTH_SHORT).show();
@@ -79,7 +82,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
-
+//delete
         btn_deleteno.setOnClickListener(view -> {
             if (etID.getText().toString().trim().isEmpty()) {
                 Toast.makeText(MainActivity2.this,"Cannot delete notice without valid notice id",Toast.LENGTH_SHORT).show();
@@ -94,7 +97,7 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-
+        //update
         btn_updatenotice.setOnClickListener(view ->
 
         {
@@ -105,7 +108,6 @@ public class MainActivity2 extends AppCompatActivity {
             }
             else if (!etID.getText().toString().trim().startsWith("N")){
                 Toast.makeText(MainActivity2.this,"Notice ID invalid",Toast.LENGTH_SHORT).show();
-
             }
               else  {
                 ntice.setID(etID.getText().toString().trim());

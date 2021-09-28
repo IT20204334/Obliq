@@ -143,7 +143,7 @@ public class CalPapers extends AppCompatActivity {
 
 
     public void calcPapersFee(Integer tFee){
-        et_23.setText("Papers Fee: " + tFee);
+        et_23.setText(" " + tFee);
     }
     public void clearAll() {
        et_23.setText("");

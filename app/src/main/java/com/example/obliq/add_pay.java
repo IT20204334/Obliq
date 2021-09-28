@@ -3,6 +3,7 @@ package com.example.obliq;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -67,6 +68,15 @@ public class add_pay extends AppCompatActivity {
                     et_Subject.getText().toString().trim().isEmpty()){
                 Toast.makeText(add_pay.this,"These fields are required",Toast.LENGTH_SHORT).show();
             }
+            else if(Card_NO.length()!=6){
+                Toast.makeText(add_pay.this,"card no should have 6 numbers",Toast.LENGTH_SHORT).show();
+            }
+            else if(et_stuID.length()!=4){
+                Toast.makeText(add_pay.this,"Stu ID has 4 characters",Toast.LENGTH_SHORT).show();
+            }
+            else if(CVV_Card.length()!=3){
+                Toast.makeText(add_pay.this,"CVV has 3 numbers",Toast.LENGTH_SHORT).show();
+            }
             else {
                 String pID = pay.getStuID();
                 pay.setName(et_stuname.getText().toString().trim());
@@ -89,26 +99,25 @@ public class add_pay extends AppCompatActivity {
                 }
 
                 ref.push().getKey();
-                Payment payment = new Payment(pname, pcard, pcvv, pexpire, psub);
+                Payment payment = new Payment(pID,pname, pcard, pcvv, pexpire, psub);
                 ref.child(pID).setValue(pay);
                 Toast.makeText(add_pay.this, "Payment details added successfully", Toast.LENGTH_SHORT).show();
-
                 clearAll();
-                }
 
+                Intent intent = new Intent(this,Ratingactivity.class);
+                startActivity(intent);
+
+
+
+            }
         });
     }
-
-
     private void clearAll(){
-       et_stuID.setText("");
+        et_stuID.setText("");
         et_stuname.setText("");
         Card_NO.setText("");
-       CVV_Card.setText("");
+        CVV_Card.setText("");
         Expire_date.setText("");
-       et_Subject.setText("");
+        et_Subject.setText("");
     }
-
-
-
 }

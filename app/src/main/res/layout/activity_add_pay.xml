@@ -32,7 +32,7 @@
       android:ems="10"
       android:hint="@string/Card_NO"
       android:inputType="number"
-      android:textColor="@color/darker_gray"
+      android:textColor="@color/black"
       android:textColorHint="@color/darker_gray"
       android:textSize="20sp"
       android:textStyle="normal"
@@ -70,6 +70,8 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/CVV_Card"
       tools:ignore="TouchTargetSizeCheck" />
+
+
 
   <Button
       android:id="@+id/btn_addp"
@@ -139,7 +141,7 @@
       android:ems="10"
       android:hint="@string/et_stuname"
       android:inputType="textPersonName"
-      android:textColor="@color/darker_gray"
+      android:textColor="@color/black"
       android:textColorHint="@color/darker_gray"
       android:textSize="20sp"
       android:textStyle="normal"
@@ -155,7 +157,7 @@
       android:ems="10"
       android:hint="@string/et_stuID"
       android:inputType="textPersonName"
-      android:textColor="@color/darker_gray"
+      android:textColor="@color/black"
       android:textColorHint="@color/darker_gray"
       android:textSize="20sp"
       android:textStyle="normal"
@@ -171,7 +173,7 @@
       android:ems="10"
       android:hint="@string/et_Subject"
       android:inputType="textPersonName"
-      android:textColor="@color/darker_gray"
+      android:textColor="@color/black"
       android:textColorHint="@color/darker_gray"
       android:textSize="20sp"
       android:textStyle="normal"

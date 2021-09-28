@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class update_pay extends AppCompatActivity {
 
-    EditText stu_name,Card_nu,stuu_ID,expir_date,et_CVV;
+    EditText stu_name,Card_nu,stuu_ID,expir_date,et_CVV,etSubject;
     RadioButton Visa_card,master_card;
     DatabaseReference ref;
     FirebaseDatabase database;
@@ -33,6 +33,7 @@ public class update_pay extends AppCompatActivity {
         master_card=findViewById(R.id.master_card);
         expir_date = findViewById(R.id.expir_date);
         et_CVV = findViewById(R.id.et_CVV);
+        etSubject = findViewById(R.id.etSubject);
         pay=new Payment();
 
         ref = database.getInstance().getReference().child("Payment");
@@ -42,7 +43,17 @@ public class update_pay extends AppCompatActivity {
             String pID = pay.getStuID();
             if(stuu_ID.getText().toString().trim().isEmpty()){
                 Toast.makeText(update_pay.this,"ID is required",Toast.LENGTH_SHORT).show();
-            }else{
+            }
+            else if(Card_nu.length()!=6){
+                Toast.makeText(update_pay.this,"card no should have 6 numbers",Toast.LENGTH_SHORT).show();
+            }
+            else if(stuu_ID.length()!=4){
+                Toast.makeText(update_pay.this,"Stu ID has 4 characters",Toast.LENGTH_SHORT).show();
+            }
+            else if(et_CVV.length()!=3){
+                Toast.makeText(update_pay.this,"CVV has 3 numbers",Toast.LENGTH_SHORT).show();
+            }
+            else{
                 pay.setName(stu_name.getText().toString().trim());
                 String pname = pay.getName();
                 pay.setCardNumber(Card_nu.getText().toString().trim());
@@ -55,13 +66,16 @@ public class update_pay extends AppCompatActivity {
                 String pvisa = pay.getCardtype();
                 pay.setCardtype(master_card.getText().toString().trim());
                 String pmaster =pay.getCardtype();
-                updatePayment(pname,pcard,pcvv,pexpire,pvisa,pmaster);
+                pay.setSubject(etSubject.getText().toString().trim());
+                String psub =pay.getCardtype();
+                updatePayment(pID,pname,pcard,pcvv,pexpire,pvisa,pmaster,psub);
             }
         });
     }
 
-    private void updatePayment(String pname, String pcard, String pcvv, String pexpire, String pvisa, String pmaster) {
-        Payment payment = new Payment(pname, pcard,pvisa,pmaster,pcvv,pexpire);
+    private void updatePayment(String pID,String pname, String pcard, String pcvv, String pexpire, String pvisa, String pmaster,String psub) {
+        Payment payment = new Payment(pID,pname, pcard,pvisa,pmaster,pcvv,pexpire,psub);
+        ref = FirebaseDatabase.getInstance().getReference().child("Payment").child(pID);
         ref.setValue(pay);
         Toast.makeText(update_pay.this,"Updated successfully",Toast.LENGTH_SHORT).show();
         clearAll();
@@ -73,5 +87,9 @@ public class update_pay extends AppCompatActivity {
         stuu_ID.setText("");
         et_CVV.setText("");
         expir_date.setText("");
+        etSubject.setText("");
+
+
+
     }
 }

@@ -77,6 +77,9 @@ public class Register extends AppCompatActivity {
                 else if(!passwordTxt.equals(confirmPasswordTxt)){
                     Toast.makeText(Register.this,"Passwords are not matching.", Toast.LENGTH_SHORT).show();
                 }
+                else if(phone.length()!=10){
+                    Toast.makeText(Register.this,"Should have 10 numbers for Mobile Number",Toast.LENGTH_SHORT).show();
+                }
                 else{
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
